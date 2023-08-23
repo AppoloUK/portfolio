@@ -1,0 +1,176 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #26292B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.navbar {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px 0;
+    background-color: #2E3239;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+}
+
+.nav-button {
+    background-color: transparent;
+    color: #A2B2EE;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.nav-button i {
+    font-size: 20px; /* Size of the icon */
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.nav-button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-button:hover {
+    color: #5F7ADB;
+}
+
+.content {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px);
+    position: relative;
+    z-index: 2;
+}
+
+
+
+.card {
+    width: 300px;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, opacity 1s ease;
+    opacity: 0;
+    animation: fadeInFast 1s forwards 1.5s;
+    position: relative;
+    z-index: 2;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 20px auto;
+    display: block;
+}
+
+.name, .bio, .icons a {
+    color: #A2B2EE;
+    text-align: center;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.icons a {
+    color: #A2B2EE;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.icons a:hover {
+    color: #5F7ADB;
+}
+
+.typewriter {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    color: #A2B2EE;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 1;
+    opacity: 0;
+    animation: typeMove 1s forwards 1.5s, fadeIn 1s forwards;
+}
+
+.cursor {
+    animation: blink 1s infinite;
+}
+
+.buy-me-coffee {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buy-me-coffee a {
+    color: #A2B2EE;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.buy-me-coffee a:hover {
+    color: #5F7ADB;
+}
+
+
+#particleCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInFast {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes typeMove {
+    0% { top: 30%; }
+    100% { top: 15%; }
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
